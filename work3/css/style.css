@@ -29,6 +29,7 @@ header{
     background: url("../img/header-fon-2.png") no-repeat center;
     background-size: cover;
     padding-top: 51px;
+    padding-bottom: 88px;
 }
 
 .header-top{
@@ -176,8 +177,153 @@ header .btn-over{
 /*** brand ***/
 
 .brand{
-    background: url("../img/wicker-flowe%20-pot.png") no-repeat left bottom;
+    padding-top: 77px;
+    padding-bottom: 60px;
+    background: url("../img/wicker-flowe%20-pot.png") no-repeat -203px 483px;
     min-height: 100vh;
+}
+
+.title{
+    color: #000;
+    font-size: 32px;
+    font-family: "Lora";
+    font-weight: 700;
+}
+
+.brand-box{
+    margin-top: 51px;
+    display: flex;
+}
+
+.brand-box__left{
+    background: #fff;
+    max-width: 419px;
+    padding: 40px 27px 56px 27px;
+    box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
+    margin-right: 76px;
+}
+
+
+
+.shift{
+    height: 263px;
+    width: 309px;
+}
+
+.intro{
+    font-family: "Lora";
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 24px;
+    line-height: 1.542;
+}
+
+.brand-box__left a{
+    display: block;
+    margin-top: 28px;
+    margin-left: 24px;
+}
+
+.brand-box__right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-product{
+    font-family: "PT Sans";
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.875;
+    width: 180px;
+}
+
+.product-title{
+    font-weight: 700;
+}
+
+
+
+
+@media all and (max-width: 825px){
+    
+    .brand{
+        background-image: none; 
+    }
+    
+    .brand-box__right{
+        justify-content: space-around;
+    }
+    
+    .brand .title br{
+        display: none;
+    }
+    
+    .shirt{
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .brand .title{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .brand-box{
+        flex-direction: column;
+    }
+    
+    .brand-box__left{
+        box-shadow: none;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    
+    .brand-box__left br{
+        display: none;
+    }
+}
+
+@media all and (max-width: 995px){
+    .brand-product{
+        margin-top: 15px;
+    }
+}
+
+@media all and (max-width: 468px){
+    .header-block p{
+        font-size: 21px;
+    }
+    
+    .header-block br{
+        display: none;
+    }
+    
+    .header-block__description{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .fast{
+        font-size: 30px;
+    }
+    
+    header .btn-over{
+        max-width: 292px;
+    }
+    
+    header .btn{
+        width: 275px;
+        
+    }
+    
+    .header-top__right{
+        margin-top: 15px;
+    }
 }
 
 
