@@ -1,0 +1,787 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.container{
+    font-family: "Raleway", sans-serif;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+label.error{
+    display: none !important;
+}
+
+.over{
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.over-input{
+    position: relative;
+}
+
+.next-prev-over div{
+    height: 14px;
+    width: 14px;
+    background: #eaeff8;
+    position: relative;
+}
+
+.next-prev-over .next::before{
+    height: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 5px solid transparent;
+    border-bottom-color: #1d242c;
+    width: 0;
+    top: calc(50% - 8px);
+    left: calc(50% - 5px);
+}
+
+.next-prev-over .prev::before{
+    height: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: #1d242c;
+    width: 0;
+    top: calc(50% - 4px);
+    left: calc(50% - 5px);
+}
+
+.next-prev-over div:hover{
+    background: #adbfe1;
+}
+
+.box-rul{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    display: none;
+}
+
+.box-rul:hover{
+    display: block;
+}
+
+.pricing-container-device .box-rul{
+    top: 9px;
+}
+
+.contact-form-input.error{
+    border: 1px solid #dc3545;
+}
+
+.calc-tittle{
+    color: #13161a;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    margin-bottom: 58px;
+}
+
+.pricing-container{
+    width: 100%;
+    padding: 18px 30px;
+    border: 1px solid #d3dbe2;
+    background-color: #fafafa;
+    margin-bottom: 19px;
+}
+
+.form-columns{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.left-column{
+    width: 255px;
+    margin-right: 45px;
+}
+
+.header{
+    margin: 0 0 12px;
+    text-align: left;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 400;
+    color: #1d242c;
+}
+
+.description{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    color: #53595e;
+}
+
+.right-column{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.number-input{
+    width: 76px;
+    height: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #d3dbe2;
+    border-radius: 3px;
+    text-align: center;
+    color: #396ebc;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    outline: 0;
+}
+
+.number-input:hover + .box-rul{
+    display: block;
+}
+
+.display-slider{
+    position: relative;
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+.ticks-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 13px;
+    padding-top: 8px;
+    margin-left: -3px;
+}
+
+.tick-text{
+    color: #1d242c;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    margin-left: 33px;
+}
+
+.tick-text:first-child{
+    margin-left: 0;
+}
+
+.tick-text::before{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 5px;
+    width: 5px;
+    background: #1d242c;
+    border-radius: 50%;
+    top: calc(50% - 2.5px);
+    left: -19px;
+}
+
+.tick-text:first-child::before{
+    display: none;
+}
+
+.tick-text:hover{
+    color: #356bba;
+}
+
+#slider{
+    background: #d3dbe2;
+    height: 2px;
+    width: 100%;
+    position: relative;
+}
+
+#slider::before{
+    content: "";
+    position: absolute;
+    background: #d3dbe2;
+    margin-top: -3px;
+    width: 2px;
+    height: 6px;
+    left: -3px;
+}
+
+#slider::after{
+    display: block;
+    content: "";
+    position: absolute;
+    background: #d3dbe2;
+    width: 2px;
+    margin-top: -3px;
+    height: 6px;
+    right: -3px;
+}
+
+.round, .ui-slider-handle{
+    position: absolute;
+    top: -12px;
+    left: 2%;
+    margin-left: -13px;
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+    background-color: #356bba;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.5);
+            box-shadow: 0 0 5px rgba(0,0,0,.5);
+    cursor: pointer;
+    outline: 0;
+    z-index: 9999;
+}
+
+#slider{
+    background: #d3dbe2;
+    height: 2px;
+    width: 97%;
+    position: relative;
+}
+
+.pricing-container hr{
+    margin: 25px 0;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #d3dbe2;
+}
+
+.pricing-card{
+    padding-bottom: 0;
+    color: #777b7f;
+    cursor: pointer;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 276px;
+    margin-bottom: 10px;
+    padding: 4px 6px 6px;
+    background: #fff;
+    border: 1px solid #d3dae1;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.pricing-card:hover{
+    -webkit-box-shadow: 0 4px 16px 0 rgba(0,0,0,.1);
+            box-shadow: 0 4px 16px 0 rgba(0,0,0,.1);
+}
+
+.pricing-card:nth-child(2){
+    margin-left: 26px;
+}
+
+.pricing-card-content{
+    margin: 3px;
+    padding: 12px 10px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.pricing-card-header{
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 1;
+    text-align: left;
+    font-weight: 300;
+}
+
+.monthly-price{
+    margin-bottom: -2px;
+    text-align: right;
+}
+
+.strong{
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.rate-hint{
+    text-align: right;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.license-count{
+    text-align: right;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+.license-count .strong{
+    margin: 0 7px 0 10px;
+}
+
+.pricing-card hr{
+    margin: 13px 0 15px;
+    border-top: 2px solid #979ca2;
+    height: 1px;
+}
+
+.rate-summary{
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.pricing-card-hint{
+    padding: 4px 9px 3px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #c0e8b3;
+    border-radius: 3px;
+    background: #eff9ed;
+    border-color: #c0e8b3;
+    line-height: 1.5;
+    color: #6ec84d;
+    display: none;
+}
+
+.pricing-card:nth-child(2) .pricing-card-hint{
+    background: #eaeff8;
+    border: 1px solid #adbfe1;
+    color: #4468b8;
+}
+
+.pricing-card-hint .strong{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.selectable{
+    
+    box-shadow:0px 0px 0px 4px #4468b8;
+    -webkit-box-shadow:0px 0px 0px 4px #4468b8;
+    -moz-box-shadow:0px 0px 0px 4px #4468b8;
+    color: #4468b8 !important;
+}
+
+.selectable:hover{
+     box-shadow:0px 0px 0px 4px #4468b8;
+    -webkit-box-shadow:0px 0px 0px 4px #4468b8;
+    -moz-box-shadow:0px 0px 0px 4px #4468b8;
+}
+
+.pricing-card-device{
+    text-align: right;
+}
+
+.device-image{
+    margin-top: 28px;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+    border: 0;
+}
+
+.device-price{
+    margin: 8px 0;
+    color: #333941;
+    text-align: right;
+}
+
+.device-quantity-label{
+    font-size: 16px;
+    text-align: left;
+}
+
+.pricing-card-device:hover{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.pricing-card-device .number-input{
+    margin-top: 3px;
+    margin-left: 5px;
+    margin-right: -1px;
+}
+
+.pricing-card-device hr{
+    margin: 13px 0 15px;
+    border-top: 2px solid #333941;
+}
+
+.pricing-card-device .rate-summary{
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #333941;
+}
+
+.pricing-card-hint-device{
+    display: block;
+    background: #eaeff8;
+    border: 1px solid #adbfe1;
+    color: #333941;
+}
+
+.btn{
+    margin: 0 0 10px 20px;
+    width: 260px;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    border: 0;
+    border-color: #4078c0;
+    outline: 0;
+    height: 50px;
+    background: #356bba;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 20px;
+    -webkit-transform: all .3s;
+        -ms-transform: all .3s;
+            transform: all .3s;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.btn:hover{
+    background: #396cad;
+}
+
+.hide{
+    display: none;
+}
+
+.btn-question{
+    display: block;
+    min-height: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid #d3dbe2;
+    border-radius: 3px;
+    background: #fafbfc;
+    outline: 0;
+    margin-left: auto;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 8.5px 15px;
+    color: #96a5b2;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 20px;
+    display: none;
+}
+
+
+/* Стилизация форм */
+
+.contact-form{
+    display: none;
+}
+
+.contact-form-input{
+    width: 100%;
+    height: 48px;
+    padding-left: 8px;
+    padding-top: 7px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #cad2d9;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #1d242c;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    outline: 0;
+}
+
+.box-input{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.box-input .contact-form-input:nth-child(1){
+    margin-right: 10px;
+}
+
+.contact-form-input::-webkit-input-placeholder{
+    color: #96a5b2;
+}
+
+.contact-form-input:-ms-input-placeholder{
+    color: #96a5b2;
+}
+
+.contact-form-input::-ms-input-placeholder{
+    color: #96a5b2;
+}
+
+.contact-form-input::placeholder{
+    color: #96a5b2;
+}
+
+.contact-form textarea{
+    height: 150px;
+    min-height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    border: 1px solid #cad2d9;
+    background-color: #fff;
+    padding-left: 8px;
+    padding-top: 15px;
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+    margin-bottom: 0;
+}
+
+@media all and (max-width: 991px){
+    
+    .pricing-container{
+        max-width: 728px;
+        margin: 0 auto;
+        margin-bottom: 19px;
+        width: 100%;
+    }
+    
+    .tick-text{
+        margin-left: 8px;
+        font-size: 12px;
+    }
+    
+    .tick-text::before{
+        display: none;
+    }
+    
+    .ticks-container{
+        max-width: 268px;
+    }
+    
+    .btn{
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        width: 90%;
+        max-width: 728px;
+        margin: 20px auto;
+        font-size: 16px;
+        
+    }
+    
+    #slider{
+        width: 104%;
+    }
+    
+}
+
+@media all and (max-width: 768px){
+    .pricing-container-first .over-input{
+        width: 100%;
+    }
+    
+    .display-slider{
+        display: none;
+    }
+    
+    .left-column{
+        width: auto;
+        margin-right: 0;
+    }
+    
+    .header{
+        margin-bottom: 4px;
+        font-size: 18px;
+    }
+    
+    .description{
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+    .pricing-container-first .number-input{
+        width: 100%;
+    }
+    
+    .form-columns{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    .pricing-card{
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        width: auto;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    
+    .pricing-card .pricing-card-content{
+        padding: 20px 0 7px;
+    }
+    
+    .pricing-card-header{
+        font-size: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    
+    .monthly-price .strong{
+        display: block;
+        margin-bottom: 3px;
+        font-size: 27px;
+    }
+    
+     .monthly-price{
+        text-align: center;
+         font-size: 13px;
+    }
+    
+    .desktop-only{
+        display: none;
+    }
+    
+    .license-count{
+        margin-top: 12px;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .license-count .strong{
+        display: inline;
+    }
+    
+    .pricing-card hr{
+        margin: 5px 0 18px;
+    }
+    
+    .rate-summary{
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .rate-hint{
+        text-align: center;
+        font-size: 13px;
+        margin-top: 3px;
+        margin-bottom: 11px;
+    }
+    
+    .pricing-card .pricing-card-hint{
+        line-height: 16px;
+        padding-top: 9px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    
+    .pricing-card:nth-child(2) .pricing-card-hint{
+        margin-top: 6px;
+        padding-top: 8px;
+        line-height: 14px;
+        text-align: center;
+    }
+    
+    .device-wrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    
+    .device-price{
+        margin: 6px 0;
+        font-size: 13px;
+    }
+    
+    .device-wrap .strong{
+        font-size: 26px;
+    }
+    
+    .device-quantity-label{
+        font-size: 12px;
+    }
+    
+    .num-wrap{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    
+    .pricing-card-device .rate-summary{
+        font-size: 16px;
+    }
+    
+    .pricing-card-hint-device{
+        margin-top: 17px;
+        padding: 6px;
+        line-height: 17px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .pricing-card-hint-device .storong{
+        font-size: 16px;
+    }
+    
+    .pricing-container-device .number-input{
+       width: 50px; 
+    }
+    
+}

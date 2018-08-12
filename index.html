@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="calc-tittle">Choose your Enplug Package</h2>
+
+        <div class="over">
+            <div class="pricing-container pricing-container-first">
+                <div class="form-columns">
+                    <div class="left-column">
+                        <p class="header">Software Licenses</p>
+                        <p class="description">Use the slider to select the number of displays you want to use with Enplug software. You'll need one software license per display.</p>
+                    </div>
+                    <div class="right-column">
+                        <div class="over-input">
+                           <input type="text" class="number-input number-input-1" id="custom-handle" value="1" name="number">
+                           
+                           <div class="box-rul">
+                              <div class="next-prev-over">
+                                  <div class="next"></div>
+                                   <div class="prev"></div>
+                              </div>
+                              
+                           </div> 
+                        </div>
+                        <div class="display-slider">
+                            <div class="ticks-container">
+                                <li class="tick-text">1</li>
+                                <li class="tick-text">100</li>
+                                <li class="tick-text">200</li>
+                                <li class="tick-text">300</li>
+                                <li class="tick-text">400</li>
+                                <li class="tick-text">500</li>
+                                <li class="tick-text">600</li>
+                                <li class="tick-text">700</li>
+                                <li class="tick-text">800</li>
+                                <li class="tick-text">900</li>
+                                <li class="tick-text">1000</li>
+
+                            </div>
+                            <div id="slider">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-columns form-hide">
+                    <div class="left-column">
+                        <p class="header">Plan Type</p>
+                    </div>
+                    <div class="right-column">
+
+                        <div id="1" class="pricing-card pricing-card-js pricing-card-first">
+                            <div class="pricing-card-content">
+                                <p class="pricing-card-header">Annual Plan</p>
+                                <p class="monthly-price"><span class="strong oneYearM">$54.00</span>/month</p>
+                                <p class="rate-hint desktop-only">rate hint</p>
+                                <p class="license-count">x<span class="strong lic">5</span>Licenses</p>
+                                <hr>
+                                <p class="rate-summary rate-summary-y">$3,240.00</p>
+                                <p class="rate-hint">Charged Annually</p>
+                            </div>
+                            <div class="pricing-card-hint">You are saving
+                                <br><span class="strong sale">$360</span>/year</div>
+                        </div>
+
+                        <div id="2" class="pricing-card pricing-card-js pricing-card-first">
+                            <div class="pricing-card-content">
+                                <p class="pricing-card-header">Monthly Plan</p>
+                                <p class="monthly-price"><span class="strong oneMonth">$60.00</span>/month</p>
+                                <p class="rate-hint desktop-only">rate hint</p>
+                                <p class="license-count">x<span class="strong lic">5</span>Licenses</p>
+                                <hr>
+                                <p class="rate-summary rate-summary-m">$300.00</p>
+                                <p class="rate-hint">Charged Annually</p>
+                            </div>
+                            <div class="pricing-card-hint">Upgrade to Annual Plan and save
+                                <br><span class="strong sale">$360</span>/year</div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#" class="contact-form contact-form-js" method="post" id="contact-form-validate">
+                    <input type="text" class="contact-form-input" name="name" placeholder="Name">
+                    <div class="box-input">
+                        <input type="email" class="contact-form-input" placeholder="Email" name="email">
+                        <input type="tel" class="contact-form-input phone" placeholder="Phone Number" name="phonenumber">
+                    </div>
+                    <textarea name="question" placeholder="Question" rows="4" class="contact-form-input"></textarea>
+
+                </form>
+
+            </div>
+
+            <div class="pricing-container pricing-container-device">
+                <div class="form-columns">
+                    <div class="left-column">
+                        <p class="header">Enplug Devices</p>
+                        <p class="description">Buy an Enplug Device to connect to each of your displays and show Enplug content.</p>
+                        <img src="img/enplug-device-md.png" alt="divice" class="device-image desktop-only">
+                    </div>
+                    <div class="right-column">
+                        <div class="pricing-card pricing-card-device">
+                            <div class="pricing-card-content">
+                                <div class="device-wrap">
+                                    <p class="device-price"><span class="strong priceD">$199.00</span>/device</p>
+                                    <div class="num-wrap"><span class="device-quantity-label">Quantity</span>
+                                       
+                                       <div class="over-input">
+                                          <input type="text" class="number-input number-input-2" name="number2">
+                                          
+                                               <div class="box-rul">
+                              <div class="next-prev-over">
+                                  <div class="next"></div>
+                                   <div class="prev"></div>
+                              </div>
+                              
+                           </div> 
+                                       </div>
+                                       
+                                    </div>
+
+                                </div>
+
+                                <hr>
+
+                                <p class="rate-summary sumPriceD">$9,950.00</p>
+                                <p class="rate-hint">Charged One Time</p>
+                            </div>
+                            <div class="pricing-card-hint pricing-card-hint-device"><span class="message">Upgrade to Annual Plan and save</span>
+                                <br><span class="strong hintDeviceSale">$360</span>/year</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn">Checkout</button>
+            <button class="btn-question">Send us your question</button>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
