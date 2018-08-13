@@ -333,7 +333,7 @@ header .btn-over{
 	right: 2px;
 	bottom: 2px;
 	left: 2px;
-	background: url("../img/tick.png") no-repeat top;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	background: url("../img/checked.png") no-repeat top;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
 	
 }
 
@@ -420,7 +420,200 @@ header .btn-over{
 
 /*** girl ***/
 
-min-title
+.girl{
+    padding-bottom: 46px;
+}
+
+.girl-blocks{
+    display: flex;
+    margin-top: 46px;
+}
+
+.girl-block:first-child{
+    margin-right: 73px;
+    min-width: 158px;
+}
+
+.girl-block:last-child{
+    min-width: 231px;
+}
+
+.min-title{
+    font-weight: 700;
+    font-family: "PT Sans";
+    font-size: 16px;
+    line-height: 2;
+}
+
+.min-desc{
+    font-weight: 400;
+    font-family: "PT Sans";
+    font-size: 16px;
+    line-height: 2;
+}
+
+.girl-box{
+    display: flex;
+}
+
+.girl-box__left{
+    margin-right: 70px;
+}
+
+.girl-box__right{
+    padding: 26px 26px 29px 33px;
+    box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    max-width: 688px;
+    margin-right: 10px;
+}
+
+.inst{
+    max-width: 100%;
+    height: auto;
+}
+
+/*** protect ***/
+
+.protect__left .protect-block{
+   margin-top: 42px;
+}
+
+.protect__right .protect-block{
+    position: absolute;
+}
+
+.protect-block1{
+    top: 0;
+    right: 504px;
+}
+
+.protect-block2{
+    top: 176px;
+    right: 461px;
+}
+
+.protect-block3{
+    top: 192px;
+    right: 25px;
+}
+
+.product-block4{
+    top: 34px;
+    right: 241px;
+}
+
+.protect__left .min-title{
+    padding-left: 30px;
+}
+
+.protect__left .min-desc{
+    padding-left: 30px;
+}
+
+.protect-blocks div:first-child{
+    margin-top: 46px;
+}
+
+.point{
+    position: absolute;
+}
+
+.point1{
+    top: 139px;
+    right: 561px;
+}
+
+.point2{
+    top: 137px;
+    right: 404px;
+}
+
+.point3{
+    right: 152px;
+    top: 137px;
+}
+
+.castle{
+    top: 335px;
+    right: 290px;
+}
+
+.protect-blocks .min-title{
+    position: relative;
+}
+
+.protect-blocks .min-title::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 17px;
+    background: #f74870;
+    left: 0;
+    top: 50%;
+}
+
+.protect .container{
+    position: relative;
+}
+
+.protect__right .protect-block{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.protect__left{
+    margin-right: 122px;
+}
+
+.protect__right .min-desc{
+    padding: 0;
+    margin-top: 20px;
+}
+
+.protect-box{
+    display: flex;
+}
+
+/*** gallery ***/
+
+.gallary{
+    padding-top: 80px;
+}
+
+.gallary .title{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 425px;
+    margin: 0 auto;
+}
+
+.gallary .title::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 48px;
+    background: url("../img/heart.png") no-repeat center;
+    left: -21.5%;
+    bottom: 3px;
+}
+
+.gallary .title::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 57px;
+    width: 86px;
+    background: url("../img/poceluj.png") no-repeat center;
+    right: -20.6%;
+    bottom: 3px;
+}
 
 @media all and (max-width: 1040px){
     .fly-block3{
@@ -429,6 +622,52 @@ min-title
     
     .fly-block1{
         left: 0;
+    }
+    
+    .girl-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .girl-box__left{
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+    
+    .girl .title br{
+        display: none;
+    }
+    
+    .girl .title{
+        text-align: center;
+    }
+    
+    .girl-blocks{
+        justify-content: center;
+    }
+    
+    .girl-box__right{
+        box-shadow: none;
+    }
+    
+    .point{
+        display: none;
+    }
+    
+    .protect__right .protect-block{
+        position: static;
+        min-width: 192px;
+    }
+    
+    .protect__right{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .protect__left{
+        margin-right: 30px;
     }
 }
 
@@ -444,7 +683,7 @@ min-title
     }
     
     .fly-block{
-        position: static;
+        position: static !important;
     }
     
     .fly-box{
@@ -502,11 +741,48 @@ min-title
     .brand-box__left br{
         display: none;
     }
+    
+    .protect-blocks{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .protect-box{
+        flex-direction: column;
+    }
+    
+    .protect__right{
+        margin-top: 40px;
+    }
+    
+    .protect__right .protect-block{
+        margin-top: 40px;
+    }
+    
+    .protect__left .protect-block{
+        width: 372px;
+    }
+    
+    .protect .title br{
+        display: none;
+    }
+    
+    .protect .title{
+        text-align: center;
+        
+    }
 }
 
 @media all and (max-width: 995px){
     .brand-product{
         margin-top: 15px;
+    }
+}
+
+@media all and (max-width: 625px){
+    .gallary .title::after, .title::before{
+        display: none !important;
     }
 }
 
@@ -562,4 +838,17 @@ min-title
         vertical-align: top;
     }
     
+}
+
+@media all and (max-width: 479px){
+    .girl-blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .girl-block:first-child{
+        margin-right: 0;
+        min-width: 231px;
+        margin-bottom: 40px;
+    }
 }
