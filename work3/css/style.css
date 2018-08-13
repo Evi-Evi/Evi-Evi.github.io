@@ -265,7 +265,7 @@ header .btn-over{
   line-height: 1.688;
   text-align: left;
   margin-top: 35px;
-    margin-bottom: 69px;
+    margin-bottom: 51px;
 }
 
 .sale-form input:not(.checkbox){
@@ -322,6 +322,11 @@ header .btn-over{
 .label {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.label{
+    font-size: 16px;
+    font-family: "PT Sans";
 }
 /* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
 .checkbox:checked + .checkbox-custom::before {
@@ -475,6 +480,10 @@ header .btn-over{
 
 /*** protect ***/
 
+.protect{
+    padding-bottom: 80px;
+}
+
 .protect__left .protect-block{
    margin-top: 42px;
 }
@@ -581,7 +590,12 @@ header .btn-over{
 /*** gallery ***/
 
 .gallary{
-    padding-top: 80px;
+    min-height: 720px;
+    padding-bottom: 40px;
+}
+
+.gallary .container{
+    position: relative;
 }
 
 .gallary .title{
@@ -591,6 +605,7 @@ header .btn-over{
     margin-bottom: 20px;
     max-width: 425px;
     margin: 0 auto;
+    margin-bottom: 21px;
 }
 
 .gallary .title::before{
@@ -613,6 +628,80 @@ header .btn-over{
     background: url("../img/poceluj.png") no-repeat center;
     right: -20.6%;
     bottom: 3px;
+}
+
+.gallary-img{
+    position: absolute;
+    display: block;
+    border: 5px solid #fff;
+    box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    height: auto;
+}
+
+.gallary-img9{
+    left: 379px;
+    top: 126px;
+}
+
+.gallary-img1{
+    left: -35px;
+    top: 290px;
+}
+
+.gallary-img2{
+    left: 0;
+    top: 111px;
+}
+
+.gallary-img3{
+    left: 131px;
+    top: 147px;
+}
+
+.gallary-img4{
+    left: 203px;
+    top: 339px;
+    z-index: 5;
+}
+
+.gallary-img8{
+    right: -35px;
+    top: 290px;
+}
+
+.gallary-img7{
+    right: 0;
+    top: 111px;
+}
+
+.gallary-img6{
+    right: 131px;
+    top: 147px;
+    z-index: 3;
+}
+
+.gallary-img5{
+    right: 203px;
+    top: 339px;
+    z-index: 5;
+}
+
+/* second-sale */
+
+.second-sale{
+    background: url("../img/second-sale.png") no-repeat center;
+    background-size: cover;
+}
+
+.second-sale .sale-block{
+    padding-top: 0px;
+}
+
+/*** footer ***/
+
+footer{
+    padding: 10px 0 60px 0;
 }
 
 @media all and (max-width: 1040px){
@@ -774,6 +863,18 @@ header .btn-over{
     }
 }
 
+@media all and (max-width: 1228px){
+    .gallary-box{
+        column-count: 3;
+    }
+    
+    .gallary-img{
+        position: static;
+        margin-top: 30px;
+    }
+    
+}
+
 @media all and (max-width: 995px){
     .brand-product{
         margin-top: 15px;
@@ -851,4 +952,32 @@ header .btn-over{
         min-width: 231px;
         margin-bottom: 40px;
     }
+    
+    .gallary-box{
+        column-count: 2;
+    }
+    
+    .gallary-img{
+        box-shadow: none;
+    }
+    
+    .protect__left .protect-block{
+        width: 318px;
+    }
+    
+    footer{
+        padding-top: 40px;
+    }
 }
+
+@media all and (max-width: 359px){
+    .gallary-box{
+        column-count: 1;
+    }
+    
+    .gallary-img{
+        margin: 20px auto 0 auto;
+    }
+}
+
+
