@@ -372,51 +372,10 @@ header .btn-over{
     top: -3px;
 }
 
-/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
-/*.checkbox-custom {
-    position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
-/*    width: 18px;             /* Обязательно задаем ширину */
-/*    height: 18px;            /* Обязательно задаем высоту */
-/*    border: 1px solid #c1c0c0;
-    margin-right: 10px;
-}
-
-.checkbox-custom,
-.label {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.label{
-    font-size: 16px;
-    font-family: "PT Sans";
-}
-
-.checkbox:checked + .checkbox-custom::before {
-    content: "";
-    display: block;
-    position: absolute;
-
-    top: 3px;
-    right: -1px;
-    bottom: 2px;
-    left: 2px;
-    background: url("../img/checked.png") no-repeat center;
-
-}
-
-.checkbox-block{
-    margin-top: 30px;
-    display: block;
-    font-size: 16px;
-    font-family: "PTSans";
-    color: #c1c0c0;
-} */
-
 /*** fly ***/
 
 .fly{
-    padding-top: 20px;
+    padding-top: 33px;
     min-height: 310px;
 }
 
@@ -567,22 +526,22 @@ header .btn-over{
 }
 
 .protect-block1{
-    top: 0;
+    top: 35px;
     right: 504px;
 }
 
 .protect-block2{
-    top: 176px;
+    top: 211px;
     right: 461px;
 }
 
 .protect-block3{
-    top: 192px;
+    top: 234px;
     right: 25px;
 }
 
 .product-block4{
-    top: 34px;
+    top: 69px;
     right: 241px;
 }
 
@@ -603,22 +562,22 @@ header .btn-over{
 }
 
 .point1{
-    top: 139px;
+    top: 174px;
     right: 561px;
 }
 
 .point2{
-    top: 137px;
+    top: 172px;
     right: 404px;
 }
 
 .point3{
     right: 152px;
-    top: 137px;
+    top: 172px;
 }
 
 .castle{
-    top: 335px;
+    top: 370px;
     right: 290px;
 }
 
