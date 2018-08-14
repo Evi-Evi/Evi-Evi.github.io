@@ -6,7 +6,12 @@
 *{
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+#phone-error{
+    display: none !important;
 }
 
 .container{
@@ -33,14 +38,23 @@ header{
 }
 
 .header-top{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 4px 0 5px 0;
 }
 
 .header-top__left, .header-top__right{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -120,6 +134,8 @@ header{
 .btn-over{
     background: black;
     padding: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: rgba(246, 116, 143, 0.18);
     max-width: 350px;
@@ -140,8 +156,14 @@ header .btn-over::before{
 }
 
 .btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #fff;
     font-family: "PT Sans";
@@ -152,10 +174,11 @@ header .btn-over::before{
     height: 96px;
     width: 336px;
     border-radius: 50px;
-    background: url() no-repeat
     background-image: -webkit-linear-gradient(left, rgb(242,62,105) 0%, rgb(248,98,130) 100%);
     background-image: -o-linear-gradient(left, rgb(242,62,105) 0%, rgb(248,98,130) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(242,62,105)), to(rgb(248,98,130)));
     background-image: linear-gradient(to right, rgb(242,62,105) 0%, rgb(248,98,130) 100%);
+    -webkit-box-shadow: 0px 31px 61.1px 3.9px rgba(249, 183, 193, 0.55);
     box-shadow: 0px 31px 61.1px 3.9px rgba(249, 183, 193, 0.55);
     cursor: pointer;
     position: relative;
@@ -192,6 +215,8 @@ header .btn-over{
 
 .brand-box{
     margin-top: 51px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -199,6 +224,7 @@ header .btn-over{
     background: #fff;
     max-width: 419px;
     padding: 40px 27px 56px 27px;
+    -webkit-box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     margin-right: 76px;
 }
@@ -225,9 +251,16 @@ header .btn-over{
 }
 
 .brand-box__right{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -259,18 +292,19 @@ header .btn-over{
 }
 
 .sale-block__desc{
-  font-size: 16px;
-  font-family: "PTSans";
-  color: #000;
-  line-height: 1.688;
-  text-align: left;
-  margin-top: 35px;
+    font-size: 16px;
+    font-family: "PTSans";
+    color: #000;
+    line-height: 1.688;
+    text-align: left;
+    margin-top: 35px;
     margin-bottom: 51px;
 }
 
 .sale-form input:not(.checkbox){
     background: transparent url("../img/phone.png") no-repeat center left;
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
     border: 0;
     display: block;
@@ -307,39 +341,68 @@ header .btn-over{
 
 
 .checkbox {
-	display: none;
+    display: none;
 }
+
+.box-check{
+    margin-top: 40px;
+    display: block;
+    font-family: "PT Sans";
+    font-size: 16px;
+    color: #c1bfc0;
+    display: flex;
+}
+
+.checkbox-custom{
+    height: 19px;
+    width: 19px;
+    border: 1px solid #c1bfc0;
+    position: relative;
+    margin-right: 16px;
+}
+
+.checkbox:checked + .checkbox-custom::before{
+    display: block;
+    height: 20px;
+    width: 20px;
+    content: '';
+    position: absolute;
+    background: url("../img/checked.png") no-repeat center;
+    right: -4px;
+    top: -3px;
+}
+
 /* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
-.checkbox-custom {
-	position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
-	width: 18px;             /* Обязательно задаем ширину */
-	height: 18px;            /* Обязательно задаем высоту */
-	border: 1px solid #c1c0c0;
+/*.checkbox-custom {
+    position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+/*    width: 18px;             /* Обязательно задаем ширину */
+/*    height: 18px;            /* Обязательно задаем высоту */
+/*    border: 1px solid #c1c0c0;
     margin-right: 10px;
 }
 
 .checkbox-custom,
 .label {
-	display: inline-block;
-	vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .label{
     font-size: 16px;
     font-family: "PT Sans";
 }
-/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+
 .checkbox:checked + .checkbox-custom::before {
-	content: "";             /* Добавляем наш псевдоэлемент */
-	display: block;			 /* Делаем его блочным элементом */
-	position: absolute;      /* Позиционируем его абсолютным образом */
-	/* Задаем расстояние от верхней, правой, нижней и левой границы */
-	top: 0px;
-	right: 2px;
-	bottom: 2px;
-	left: 2px;
-	background: url("../img/checked.png") no-repeat top;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
-	
+    content: "";
+    display: block;
+    position: absolute;
+
+    top: 3px;
+    right: -1px;
+    bottom: 2px;
+    left: 2px;
+    background: url("../img/checked.png") no-repeat center;
+
 }
 
 .checkbox-block{
@@ -348,13 +411,13 @@ header .btn-over{
     font-size: 16px;
     font-family: "PTSans";
     color: #c1c0c0;
-}
+} */
 
 /*** fly ***/
 
 .fly{
-    padding-top: 94px;
-    min-height: 100vh;
+    padding-top: 20px;
+    min-height: 310px;
 }
 
 
@@ -416,9 +479,15 @@ header .btn-over{
 }
 
 .fly-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -430,6 +499,8 @@ header .btn-over{
 }
 
 .girl-blocks{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 46px;
 }
@@ -458,6 +529,8 @@ header .btn-over{
 }
 
 .girl-box{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -467,6 +540,7 @@ header .btn-over{
 
 .girl-box__right{
     padding: 26px 26px 29px 33px;
+    -webkit-box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     max-width: 688px;
@@ -485,7 +559,7 @@ header .btn-over{
 }
 
 .protect__left .protect-block{
-   margin-top: 42px;
+    margin-top: 42px;
 }
 
 .protect__right .protect-block{
@@ -569,8 +643,15 @@ header .btn-over{
 
 .protect__right .protect-block{
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -584,6 +665,8 @@ header .btn-over{
 }
 
 .protect-box{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -634,6 +717,7 @@ header .btn-over{
     position: absolute;
     display: block;
     border: 5px solid #fff;
+    -webkit-box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 1px 27px 0px rgba(0, 0, 0, 0.15);
     max-width: 100%;
     height: auto;
@@ -690,8 +774,9 @@ header .btn-over{
 /* second-sale */
 
 .second-sale{
-    background: url("../img/second-sale.png") no-repeat center;
+    background: url("../img/second-sale.png") no-repeat bottom;
     background-size: cover;
+    min-height: 100%;
 }
 
 .second-sale .sale-block{
@@ -701,178 +786,216 @@ header .btn-over{
 /*** footer ***/
 
 footer{
-    padding: 10px 0 60px 0;
+    padding: 50px 0 60px 0;
 }
 
 @media all and (max-width: 1040px){
     .fly-block3{
         left: 359px;
     }
-    
+
     .fly-block1{
         left: 0;
     }
-    
+
     .girl-box{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
-    
+
     .girl-box__left{
         margin-bottom: 40px;
         margin-right: 0;
     }
-    
+
     .girl .title br{
         display: none;
     }
-    
+
     .girl .title{
         text-align: center;
     }
-    
+
     .girl-blocks{
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
-    
+
     .girl-box__right{
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     .point{
         display: none;
     }
-    
+
     .protect__right .protect-block{
         position: static;
         min-width: 192px;
     }
-    
+
     .protect__right{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
-    
+
     .protect__left{
         margin-right: 30px;
     }
 }
 
 @media all and (max-width: 992px){
-    
+
     .girl{
         padding-top: 80px;
     }
-    
+
     .sale-block, .header-block, .header-top{
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .fly-block{
         position: static !important;
     }
-    
+
     .fly-box{
         padding-top: 70px;
     }
-    
+
     .aircraft{
         max-width: 100%;
         height: auto;
     }
-    
+
     .fly-block{
         width: 275px;
         margin-top: 40px;
     }
+    
+    footer{
+        padding-top: 40px;
+    }
 }
 
 @media all and (max-width: 825px){
-    
+
     .brand{
-        background-image: none; 
+        background-image: none;
     }
-    
+
     .brand-box__right{
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
-    
+
     .brand .title br{
         display: none;
     }
-    
+
     .shirt{
         display: block;
         height: auto;
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .brand .title{
         text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
-    
+
     .brand-box{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    
+
     .brand-box__left{
+        -webkit-box-shadow: none;
         box-shadow: none;
         max-width: 100%;
         margin-right: 0;
     }
-    
+
     .brand-box__left br{
         display: none;
     }
-    
+
     .protect-blocks{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    
+
     .protect-box{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    
+
     .protect__right{
         margin-top: 40px;
     }
-    
+
     .protect__right .protect-block{
         margin-top: 40px;
     }
-    
+
     .protect__left .protect-block{
         width: 372px;
     }
-    
+
     .protect .title br{
         display: none;
     }
-    
+
     .protect .title{
         text-align: center;
-        
+
     }
 }
 
 @media all and (max-width: 1228px){
     .gallary-box{
+        -webkit-column-count: 3;
         column-count: 3;
     }
-    
+
     .gallary-img{
         position: static;
         margin-top: 30px;
     }
-    
+
 }
 
 @media all and (max-width: 995px){
@@ -888,96 +1011,99 @@ footer{
 }
 
 @media all and (max-width: 468px){
-    
+
     .logo-desc br{
         display: none;
     }
-    
+
     .title{
         font-size: 23px;
     }
-    
+
     .header-block p{
         font-size: 21px;
     }
-    
+
     .header-block br{
         display: none;
     }
-    
+
     .header-block__description{
         font-size: 18px;
         margin-top: 20px;
     }
-    
+
     .fast{
         font-size: 30px;
     }
-    
+
     .btn-over{
         max-width: 292px;
     }
-    
+
     .btn{
         width: 275px;
-        
+
     }
-    
+
     .header-top__right{
         margin-top: 15px;
     }
-    
+
     .brand-box__left .intro{
         font-size: 20px;
     }
-    
+
     .sale .call-back{
         display: block;
     }
-    
+
     .checkbox-custom, .label{
         vertical-align: top;
     }
-    
+
 }
 
 @media all and (max-width: 479px){
     .girl-blocks{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
-    
+
     .girl-block:first-child{
         margin-right: 0;
         min-width: 231px;
         margin-bottom: 40px;
     }
-    
+
     .gallary-box{
+        -webkit-column-count: 2;
         column-count: 2;
     }
-    
+
     .gallary-img{
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     .protect__left .protect-block{
         width: 318px;
     }
-    
-    footer{
-        padding-top: 40px;
-    }
+
 }
 
 @media all and (max-width: 359px){
     .gallary-box{
+        -webkit-column-count: 1;
         column-count: 1;
     }
-    
+
     .gallary-img{
         margin: 20px auto 0 auto;
     }
 }
-
-
