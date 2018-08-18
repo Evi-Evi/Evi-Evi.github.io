@@ -3,7 +3,8 @@
   src: url("../font/museo/museo.ttf"); }
 body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background: #1d1d1d; }
 
 html {
   height: 100%;
@@ -104,7 +105,28 @@ header {
   color: #fff;
   font-size: 36px;
   text-align: center;
-  font-family: "Museo"; }
+  font-family: "Museo";
+  position: relative; }
+  .title_line::before {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 2px;
+    background: #e8d779;
+    left: 49.5%;
+    top: -102px;
+    z-index: 100; }
+  .title_line::after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 2px;
+    background: #e8d779;
+    left: 50.3%;
+    top: -87px;
+    z-index: 100; }
 
 .btn {
   display: block;
@@ -125,6 +147,64 @@ header {
   min-height: 100%; }
 
 .comand {
-  height: 500px;
+  padding-top: 45px;
+  height: 100vh;
   width: 100%;
-  background: #1d1d1d; }
+  background: #1d1d1d url("../img/mount.png") no-repeat center; }
+
+.comand-over {
+  height: 100%;
+  background: rgba(29, 29, 29, 0.1); }
+
+.comand-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 58px; }
+  .comand-box__block-title {
+    margin-bottom: 35px; }
+  .comand-box__block-desc {
+    max-width: 415px; }
+
+.comand-block {
+  margin-right: 158px; }
+
+.block-title {
+  color: #fff;
+  font-family: "Museo";
+  font-size: 24px;
+  line-height: 1.66;
+  text-align: left; }
+
+.block-desc {
+  color: #cbcbcb;
+  font-family: "PT Sans";
+  line-height: 2; }
+
+.comand-video {
+  width: 593px;
+  height: 361px;
+  border-radius: 15%; }
+
+.over-video {
+  position: relative; }
+
+.play {
+  top: calc(50% - 30.5px);
+  left: calc(50% - 30.5px);
+  display: block;
+  position: absolute;
+  height: 71px;
+  width: 71px;
+  border-radius: 50%;
+  background: #e8d779 url("../img/play-button.png") no-repeat 28px center;
+  -webkit-box-shadow: 0px 6px 6px 0px rgba(215, 200, 114, 0.55);
+          box-shadow: 0px 6px 6px 0px rgba(215, 200, 114, 0.55);
+  cursor: pointer; }
+
+.gallary {
+  height: 100vh;
+  background: url("../img/map.png") no-repeat center; }
