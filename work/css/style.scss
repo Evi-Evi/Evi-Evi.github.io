@@ -33,6 +33,10 @@ body{
     font-family: "Raleway", sans-serif;
 }
 
+button{
+    font-family: "Raleway", sans-serif;
+}
+
 .line{
     height: 1px;
     background: #dee3e7;
@@ -41,6 +45,8 @@ body{
 .header-top {
     padding-top: 18px;
     padding-bottom: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
 	display: flex;
     justify-content: space-between;
 }
@@ -86,9 +92,23 @@ body{
     }
 }
 
+.title{
+    font-weight: 800;
+    font-size: 30px;
+    color: $black;
+    text-align: center;
+}
+
+.container__title{
+    margin-top: 110px;
+    margin-bottom: 50px;
+    
+}
+
 .over-menu {
 	display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .menu{
@@ -111,27 +131,369 @@ body{
     }
 }
 
+.touch-menu{ 
+    background: red;
+    height: 32px;
+    width: 32px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-right: 15px;
+    margin-left: auto;
+    right: 15px;
+    top: 5px;
+    background: url("../img/menu.png") no-repeat;
+    display: none;
+}
+
 .header-mid {
-	height: 100vh;
+    //padding-left: 15px;
+    padding-bottom: 120px;
+    
     background: url("../img/back1.png") no-repeat center;
     background-size: cover;
+    
+    .container {
+	    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
 .header-offer {
+    padding-top: 64px;
+    padding-left: 15px;
     &__intro{
         background: $white;
         padding: 14px 33px 14px 23px;
         display: flex;
         margin-left: 102px;
         position: relative;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        width: 262px;
+        margin-bottom: 58px;
         &::before{
+            content: "";
+            left: -50px;
+            top: 0;
+            display: block;
+            position: absolute;
+            border: 30px solid transparent;
+            border-right: 20px solid $white;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            height: 55px;
+            width: 55px;
+            background: url("../img/like.png") no-repeat center;
+            left: -100px;
+            top: 3px;
+        }
+    }
+    
+    &__title{
+        color: $white;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 65px;
+        &_big{
+            text-transform: uppercase;
+            font-size: 55px;
+        }
+    }
+    
+    &__item{
+        color: $white;
+        font-weight: bold;
+        line-height: 2;
+        margin-bottom: 48px;
+        padding-left: 67px;
+        position: relative;
+        &_f::before{
             content: "";
             display: block;
             position: absolute;
-            border: 20px solid red;
-            border-right: 20px solid black;
+            width: 38px;
+            height: 37px;
+            background: url("../img/plant.png") no-repeat center;
+            left: 0px;
         }
+        &_s::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 39px;
+            background: url("../img/leaf.png") no-repeat center;
+            left: 0px;
+        }
+        &_t::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 47px;
+            height: 37px;
+            background: url("../img/kettle.png") no-repeat center;
+            left: 0px;
+        }
+        
+        &_t{
+            font-size: 20px;
+        }
+    }
+    
+}
+
+.header-form {
+    margin-top: 123px;
+    background: $white;
+    padding: 49px 25px;
+    position: relative;
+    &__title{
+        color: $red;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 24px;
+        &_b{
+            text-transform: uppercase;
+            font-size: 23px;
+        }
+    }
+    &__intro{
+        line-height: 1.2;
+        color: $black;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+    
+    &__input{
+        width: 100%;
+        display: block;
+        padding: 10px 0 13px 11px;
+        border: 1px solid $black;
+        color: $black;
+        font-weight: 300;
+        margin-bottom: 39px;
+        &::-webkit-input-placeholder { color: $black; font-weight: 300;}
+    }
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 350px;
+        height: 531px;
+        background: url("../img/Tea.png") no-repeat center;
+        left: -270px;
+        top: -58px;
+    }
+    
+    
+}
+
+.header-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 21px 27px;
+    color: $white;
+    font-size: #f1f2f5;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(left, rgb(124,0,25) 0%, rgb(237,15,55) 100%);
+    background-image: -o-linear-gradient(left, rgb(124,0,25) 0%, rgb(237,15,55) 100%);
+    background-image: linear-gradient(to right, rgb(124,0,25) 0%, rgb(237,15,55) 100%);
+    border-radius: 5px;
+    line-height: 1.2;
+    
+}
+
+/*** product ***/
+
+.product-block {
+	width: 375px;
+    height: 304px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.43);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+
+.product-container {
+	background: $black;
+    padding: 17px 0;
+}
+
+.product-title {
+	color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.product-intro {
+	color: #e5e5e5;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.product-price {
+	color: $white;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    display: none;
+}
+
+.product-select {
+	color: #e5e5e5;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    display: none;
+}
+
+.buy {
+	display: block;
+    margin: 0 auto;
+    padding: 14px 46px;
+    background: transparent;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    color: $yellow;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: none;
+    font-family: "Raleway";
+    cursor: pointer;
+}
+
+.product-block:hover img, {
+	display: none;
+}
+
+.product-block:hover .product-select {
+	display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-block:hover .product-price{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.product-block:hover .product-container {
+	position: absolute;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    background: rgba(62, 62, 60, 0.9);
+}
+
+.product-block:hover {
+	background: url(../img/present.png) no-repeat center;
+    background-size: cover;
+    
+}
+
+.product-block:hover .product-title {
+	margin-top: 40px;
+    font-size: 18px;
+}
+
+.product-block:hover .product-intro {
+	font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.product-block:hover .buy{
+    display: block;
+}
+
+.products-block {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media all and (max-width: 1068px){
+    .header-form::before {
+	    display: none;
+    } 
+}
+
+@media all and (max-width: 896px){
+    .header-mid .container{
+        flex-direction: column;
+    }
+    
+    .header-form {
+	    margin-top: 0;
+    }
+    
+    .over-menu {
+       flex-direction: column;
+    }
+    
+    .menu {
+	    display: none;
+    }
+    
+    .touch-menu {
+	    display: block;
+    }
+    
+    .menu a{
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 698px){
+    .header-top{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 468px){
+    .header-offer__title{
+        text-align: center;
+    }
+    
+    .header-offer__intro::after{
+        display: none;
+    }
+    
+    .header-offer__intro::before{
+        display: none;
+    }
+    
+    .header-offer__intro{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media all and (max-width: 420px){
+    .product-block {
+	    box-shadow: none;
+        width: 319px;
+    }
+    .product-block img {
+	    height: auto;
+        max-width: 100%;
     }
 }
 
