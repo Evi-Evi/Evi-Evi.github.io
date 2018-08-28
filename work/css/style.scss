@@ -1,0 +1,138 @@
+$yellow: #f1c701;
+$black: #3e3e3c;
+$white: #fff;
+$pink: #d30d2f;
+$red: #790514;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+}
+
+.container {
+	max-width: 1200px;
+    margin: 0 auto;
+}
+
+.yellow{
+    color: $yellow;
+}
+
+.pink{
+	color: $pink;
+}
+
+.red{
+    color: $red;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+.line{
+    height: 1px;
+    background: #dee3e7;
+}
+
+.header-top {
+    padding-top: 18px;
+    padding-bottom: 22px;
+	display: flex;
+    justify-content: space-between;
+}
+
+.logo-box{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: $black;
+    &__intro{
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+}
+
+.logo{
+    margin-right: 30px;
+}
+
+.phone {
+	color: $black;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.order-call {
+    line-height: 1.2;
+	font-weight: 700;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: "";
+        display: block;
+        height: 26px;
+        width: 49px;
+        background: url("../img/phone.png") no-repeat;
+        margin-left: 12px;
+    }
+}
+
+.over-menu {
+	display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    li{
+        list-style: none;
+    }
+    a{
+        display: block;
+        padding: 20px 29px 20px 31px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black;
+        font-weight: 800;
+        transition: all .4s;
+        &:hover{
+            background: $yellow;
+            box-shadow: 0px 4px $yellow;
+        }
+    }
+}
+
+.header-mid {
+	height: 100vh;
+    background: url("../img/back1.png") no-repeat center;
+    background-size: cover;
+}
+
+
+.header-offer {
+    &__intro{
+        background: $white;
+        padding: 14px 33px 14px 23px;
+        display: flex;
+        margin-left: 102px;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border: 20px solid red;
+            border-right: 20px solid black;
+        }
+    }
+}
+
+
