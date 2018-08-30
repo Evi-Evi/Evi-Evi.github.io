@@ -886,10 +886,144 @@ footer{
     text-align: center;
 }
 
+
+.gallery {
+    display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    .container {
+	    width: 100%;
+        height: 100%;
+        position: relative;
+        
+    }
+    background: $black;
+}
+
+.ex {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url("../img/close.png") no-repeat center;
+    border-radius: 50%;
+    border: 3px solid $white;
+    right: 15px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: none;
+}
+
+.modal {
+    width: 300px;
+    padding: 20px;
+    border-right: 5px;
+    background: $white;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 1000;
+    margin-left: -150px;
+    
+    display: none;
+    
+    &__btn-bar{
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    
+    &__input{
+         display: block;
+    margin-top: 10px;
+        width: 100%;
+        height: 38px;
+        border: 1px solid $black;
+        border-radius: 5px;
+        padding: 0 10px;
+        color: $black;
+        font-weight: 700;
+    }
+    position: fixed;
+    
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.btn-bar_close{
+    margin: 0 auto;
+}
+
+.close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url("../img/close.png") no-repeat center;
+    top: -16px;
+    right: -16px;
+}
+
+.gallery-box{
+    max-width: 713px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.gallery .slick-initialized .slick-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery .slick-prev:before {
+	 background: url(../img/arrow2.png);
+}
+
+.gallery .slick-next:before {
+	 background: url(../img/arrow2.png);
+}
+
+
+
 @media all and (max-width: 1200px){
     .reward .slick-initialized .slick-slide{
         display: flex;
         justify-content: center;
+    }
+    
+    .reward-block:hover::before {
+	display: none;
+}
+    .contact-box__intro_ttu-s{
+        margin: 0;
+        
+    }
+    .contact-box__intro_ttu{
+        margin-left: 0;
+        display: block;
     }
 }
 
@@ -947,10 +1081,8 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-}
-
-@media all and (max-width: 620px){
-    .button-box {
+    
+        .button-box {
 	    flex-direction: column;
         align-items: center;
         margin: 0 auto;
@@ -962,6 +1094,10 @@ footer{
     .btn-bar-second{
         margin-top: 20px;
     }
+}
+
+@media all and (max-width: 620px){
+
     
     .production-block {
 	flex-direction: column;

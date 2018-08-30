@@ -41,6 +41,19 @@
     outline: none;
     background: transparent;
 }
+
+.gallery .slick-prev{
+	top: 58%;
+}
+
+.gallery .slick-next{
+	top: 58%;
+}
+
+.gallery .slick-arrow {
+	top: 58%;
+}
+
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
