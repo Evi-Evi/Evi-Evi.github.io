@@ -37,9 +37,47 @@ $(document).ready(function(){
     });
     
     
-   /* $(".product-block").hover(function(){
-        $(this).find("img").hide(0);
-    }); */
+  $(".reward-box").slick({
+      slidesToShow: 3,
+      adaptiveHeight: true,
+      responsive: [
+          {
+          breakpoint: 1200,
+          settings: {
+            infinite: true,
+            arrows: false,
+              slidesToShow: 2
+            }
+        },
+          
+        {
+            breakpoint: 800,
+            settings: {
+                infinite: true,
+                arrows: false,
+                slidesToShow: 1,
+            }
+        }
+      ]
+  });
+    
+ $(".production-slider").slick({
+     
+     fade: true,
+     arrows: false,
+     dots: true,
+ });
+    
+//плавный скролл
+    
+    $(".menu a").click(function(e){
+        e.preventDefault();
+        
+        var path = $(this).attr("href");
+        
+        $("body, html").animate({scrollTop: $(path).offset().top - $(".over-menu").innerHeight() - 20}, 1000);
+    });
+    
 });
 
 

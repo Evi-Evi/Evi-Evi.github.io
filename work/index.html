@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Иван-чай</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,16 +36,16 @@
                </div>
                
                 <ul class="menu">
-                    <li><a href="#">Продукт</a></li>
-                    <li><a href="#">Выгода</a></li>
-                    <li><a href="#">Производство</a></li>
-                    <li><a href="#">Сертификаты</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#product">Продукт</a></li>
+                    <li><a href="#benefit">Выгода</a></li>
+                    <li><a href="#production">Производство</a></li>
+                    <li><a href="#reward">Сертификаты</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>      
         </div>
         
-        <div class="header-mid">
+        <div class="header-mid" id="product">
            <div class="container">
                 <div class="header-offer">
                 <p class="header-offer__intro red">собственная заготовка,<br>
@@ -69,13 +72,60 @@
         </div>
     </header>
     
+    <section class="benefit" id="benefit">
+        <div class="container">
+            <p class="title container__title">Ваши выгоды <span class="pink">партнёра</span></p>
+            
+            <div class="benefit-box">
+                <div class="benefit-block">
+                    <img src="img/delivery.png" alt="delivery">
+                    <p class="benefit-block__title"><span class="pink">бесплатная доставка</span> на<br> заказы от 5000руб</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="img/graph-growing.png" alt="graph">
+                    <p class="benefit-block__title">Торговое оборудование в<br> <span class="pink">бесплатное пользование</span></p>
+                </div>
+                <div class="benefit-block">
+                    <img src="img/shop-icon.png" alt="shop">
+                    <p class="benefit-block__title">передача на реализацию</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="img/shipping-icons-rma.png" alt="shipping">
+                    <p class="benefit-block__title"><span class="pink">возврат</span> не проданных<br> остатков</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="img/Packaging.png" alt="packaging">
+                   <p class="benefit-block__title"><span class="pink">фасовка</span> под ваши<br> требования</p>
+                </div>
+                <div class="benefit-block">
+                    <img src="img/advertise1.png" alt="advertise">
+                    <p class="benefit-block__title"><span class="pink">рекламная поддержка</span> и<br> промоакции</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="button-bar">
+        <div class="container">
+            <div class="button-box">
+            
+            <button class="btn-bar button-box__btn-bar">Скачать условия партнёрства</button>
+            
+            <button class="btn-bar-second">Купить чай</button>
+            
+            </div>
+        </div>
+    </section>
+    
     <section class="products">
         <div class="container">
             <p class="title container__title">Продукция</p>
             
             <div class="products-block">
                 <div class="product-block">
-                    <img src="img/present.png" alt="present">
+                       <div class="over-img">
+                       <img src="img/present.png" alt="tea">
+                   </div>
                     <div class="product-container">
                         <p class="product-title">Иван-чай</p>
                         <p class="product-intro">классический</p>
@@ -85,7 +135,9 @@
                     </div>
                 </div>
                 <div class="product-block">
-                    <img src="img/present.png" alt="">
+                       <div class="over-img">
+                       <img src="img/present.png" alt="tea">
+                   </div>
                     <div class="product-container">
                         <p class="product-title">Иван-чай</p>
                         <p class="product-intro">ароматизированный</p>
@@ -95,7 +147,9 @@
                     </div>
                 </div>
                 <div class="product-block">
-                    <img src="img/present.png" alt="">
+                       <div class="over-img">
+                       <img src="img/present.png" alt="tea">
+                   </div>
                     <div class="product-container">
                         <p class="product-title">Иван-чай</p>
                         <p class="product-intro">с травами</p>
@@ -105,7 +159,10 @@
                     </div>
                 </div>
                 <div class="product-block">
-                    <img src="img/present.png" alt="">
+                   <div class="over-img">
+                       <img src="img/present.png" alt="tea">
+                   </div>
+                    
                     <div class="product-container">
                         <p class="product-title">Иван-чай</p>
                         <p class="product-intro">C ягодами и плодами</p>
@@ -114,8 +171,11 @@
                         <button class="buy">Купить</button>
                     </div>
                 </div>
-                <div class="product-block">
-                    <img src="img/present.png" alt="">
+                <div class="product-block product-block_honey">
+                       <div class="over-img">
+                         <img src="img/honey.png" alt="tea">  
+                       </div>
+                    
                     <div class="product-container">
                         <p class="product-title">Сладости</p>
                         <p class="product-intro">К чаю</p>
@@ -124,8 +184,11 @@
                          <button class="buy">Купить</button>
                     </div>
                 </div>
-                <div class="product-block">
-                    <img src="img/present.png" alt="">
+                <div class="product-block product-block_tea">
+                   <div class="over-img">
+                       <img src="img/mikasa.png" alt="mikasa">
+                   </div>
+                    
                     <div class="product-container">
                         <p class="product-title">Посуда</p>
                         <p class="product-intro">Для чаепития</p>
@@ -138,7 +201,222 @@
         </div>
     </section>
     
+     <section class="button-bar button-bar_s">
+        <div class="container">
+            <div class="button-box">
+            
+            <button class="btn-bar button-box__btn-bar">получить каталог с ценами и скидками</button>
+            
+            <button class="btn-bar-second">Купить чай</button>
+            
+            </div>
+        </div>
+    </section>
+    
+    <section class="packaging">
+        <div class="container">
+            <p class="title container__title">Фасовка</p>
+            
+            <div class="packaging-box">
+                <div class="packaging-block">
+                   
+                   <div class="pack-i-over">
+                       <img src="img/ivan-chay-listovoy.png" alt="tea">
+                   </div>
+                   
+                    
+                    <p class="packaging-block__title">Россыпью</p>
+                </div>
+                <div class="packaging-block">
+                   
+                   <div class="pack-i-over">
+                       <img src="img/present2.png" alt="tea">
+                   </div>
+                   
+                   
+                    <p class="packaging-block__title">в пакетах по 50 и 100гр</p>
+                </div>
+                <div class="packaging-block">
+                   
+                   <div class="pack-i-over">
+                       <img src="img/box.png" alt="box">
+                   </div>
+                   
+                    
+                    <p class="packaging-block__title">В банках</p>
+                </div>
+                <div class="packaging-block">
+                   
+                   <div class="pack-i-over">
+                       <img src="img/nabor1.png" alt="pack">
+                   </div>
+                   
+                    
+                    <p class="packaging-block__title">подарочные упаковки</p>
+                </div>
+                <div class="packaging-block">
+                   <div class="pack-i-over">
+                       <img src="img/clip.png" alt="clip">
+                   </div>
+                    
+                    <p class="packaging-block__title">прессованый</p>
+                </div>
+                <div class="packaging-block">
+                   
+                   <div class="pack-i-over">
+                        <img src="img/tea-bags.png" alt="tea">
+                   </div>
+                   
+                   
+                    <p class="packaging-block__title">в фильтр-пакетиках</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section class="button-bar button-bar_t">
+        <div class="container">
+            <div class="button-box">
+            
+            <button class="btn-bar button-box__btn-bar">получить каталог с ценами и скидками</button>
+            
+            <button class="btn-bar-second">Купить чай</button>
+            
+            </div>
+        </div>
+    </section>
+    
+    <section class="production" id="production">
+        <div class="container">
+            <p class="title container__title">Как мы добиваемся неповторимого<br> 
+<span class="pink">вкуса ИВАН-ЧАЯ</span></p>
+       
+       <div class="production-box">
+           <div class="production-block">
+               <div class="production-slider bb">
+                   <img src="img/s1.png" alt="tea" class="production-slider__slide">
+                   <img src="img/s1.png" alt="tea" class="production-slider__slide">
+                   <img src="img/s1.png" alt="tea" class="production-slider__slide">
+               </div>
+               <p class="production-title">Собираем иван-чай руками в естественных природных условиях в которых он рос без удобрений и химикатов</p>
+           </div>
+           <div class="production-block">
+               <div class="production-slider">
+                   <img src="img/s2.png" alt="tea">
+                   <img src="img/s2.png" alt="tea">
+                   <img src="img/s2.png" alt="tea">
+               </div>
+               <p class="production-title production-title_sm">Ферментируем и сушим по оригинальной технологии без соприкосновения чая с металлом чтобы не было кислинки. Многое оборудование для этого дорабатывали сами.</p>
+           </div>
+           <div class="production-block">
+               <div class="production-slider">
+                   <img src="img/s3.png" alt="tea">
+                   <img src="img/s3.png" alt="tea">
+                   <img src="img/s3.png" alt="tea">
+               </div>
+               <p class="production-title">Храним чай в климатических камерах на деревянных настилах. Выдерживаем температуру 15 градусов  и влажность 30% круглый год.</p>
+           </div>
+           <div class="production-block">
+               <div class="production-slider">
+                   <img src="img/s4.png" alt="tea">
+                   <img src="img/s4.png" alt="tea">
+                   <img src="img/s4.png" alt="tea">
+               </div>
+               <p class="production-title production-title_sm">Фасуем чай перед отправкой в герметичные пакеты чтобы исключить попадание влаги, посторонних запахов и потери товара.</p>
+           </div>
+       </div>
+        </div>
+    </section>
+    
+    
+            <section class="button-bar button-bar_fo">
+        <div class="container">
+            <div class="button-box">
+            
+            <button class="btn-bar button-box__btn-bar">получить каталог с ценами и скидками</button>
+            
+            <button class="btn-bar-second">Купить чай</button>
+            
+            </div>
+        </div>
+    </section>
+    
+    <section class="reward" id="reward">
+        <div class="container">
+            <p class="title container__title">Сертификаты и награды</p>
+            
+            <div class="reward-box">
+               
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                <div class="reward-block"><img src="img/slaid.png" alt="slide"></div>
+                   
+            </div>
+        </div>
+    </section>
+    
+    
+      <section class="delivery">
+         <div class="container">
+             <p class="delivery-title">Доставка</p>
+             
+             <div class="delivery-box">
+                 <p class="delivery-item">Доставка транспортной компанией либо до терминала либо до дверей</p>
+                 <p class="delivery-item">Доставка курьерской службой до дверей с оплатой при получении</p>
+                 <p class="delivery-item">Самовывоз со склада в г.Екатерибург</p>
+                 <p class="delivery-item">Доставка курьерской службой боксбери до места выдачи с оплатой при получении</p>
+                 <p class="delivery-item">Доставка почтой России</p>
+             </div>
+             
+             <button class="btn-bar delivery__btn-bar">заказать чай</button>
+         </div>
+          
+      </section>
+           
+           
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contacts-box__title">Контакты</div>
+                <p class="contact-box__intro contact-box__intro_mb">Производство:     <span class="contact-box__intro_ttu">г.Екатерибург</span></p>
+                <p class="contact-box__intro">Офис:                       <span class="contact-box__intro_ttu-s">г.Челябинск</span></p>
+                
+                <p class="contact-box__item contact-box__item_f">адрес адрес адрес
+адрес</p>
+           <p class="contact-box__item contact-box__item_s">mail@mail.ru</p>
+           <p class="contact-box__item contact-box__item_t">+7(351)0000000 <a href="#" class="contact-box__item_yellow">заказать звонок</a></p>
+           
+           <div class="social-box">
+              <a href="#" class="social-box__link"><img src="img/vk-logo.png" alt="vk"></a>
+              <a href="#" class="social-box__link"><img src="img/facebook-logo.png" alt="facebook"></a>
+              <a href="#" class="social-box__link"><img src="img/instagram.png" alt="instagram"></a>
+           </div>
+            </div>
+            
+            <div class="contact-map">
+                <div id="map"></div>
+            </div>
+            
+        </div>
+    </section>
+           
+           
+    <div class="line-second"></div>        
+        
+    <footer>
+        <div class="container">
+            <p class="footer-title">копирайтинг</p>
+        </div>
+    </footer>
+    
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/maps.js"></script>
 </body>
 </html>
